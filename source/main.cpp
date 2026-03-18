@@ -1,17 +1,17 @@
 #include<raylib.h>
-#include "area.h"
+#include "simulation.h"
 
 int main() 
 {
-    InitWindow(800,800, "AWAIS Chess");
-    SetAudioStreamBufferSizeDefault(4096);
-    SetTargetFPS(60);
-    Area grid;
+    InitWindow(800,800, "Life Simulation");
+    SetTargetFPS(12);
+    Simulation algo;
 
     while(WindowShouldClose() == false) 
     {
         BeginDrawing();
-        
+        ClearBackground(RED);
+        algo.Draw_Simulation(); 
         EndDrawing();
     }
 
